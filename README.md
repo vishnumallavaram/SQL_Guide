@@ -1,82 +1,85 @@
-SQL Learning Guide --- Videos 1--42
-Overview
-This repository section supports a practical SQL learning program built
-around the Kudvenkat SQL Server Tutorial for Beginners YouTube
-playlist. Students watch the assigned videos, then practise the concepts
-using business-style datasets and work-based questions.
-- YouTube lesson:
-  https://youtu.be/7GVFYt6_ZFM?si=ukbl_wlh9nS8XOPAU
-- Full playlist:
-  https://www.youtube.com/watch?v=7GVFYt6_ZFM&list=PL08903FB7ACA1C2FB
-- SQL practice environment: Databricks SQL Editor
-- Practice progression: Beginner → Intermediate → Advanced
-- Business datasets: Retail, Banking, HR, and synthetic Healthcare
-  data
-Important: Video 1
-Skip playlist Video 1, which covers installing SQL Server and SSMS.
-The course uses Databricks SQL Editor, so local SQL Server installation
-is not part of the setup.
-How students should use this guide
-1. Watch the assigned video or batch of videos.
-2. Review the lesson focus and expected learning outcome in the guide.
-3. Practise the concept in Databricks SQL Editor.
-4. Use the business datasets to answer realistic questions.
-5. Test edge cases such as missing values, duplicate records, unmatched
-   keys, and boundary dates where relevant.
-6. Keep your SQL scripts organised by batch and add comments explaining
-   important logic.
-7. Complete the practice scenarios before moving to the next batch.
-Learning batches
-  Batch                              Playlist videos Main topics
-  1. Environment,                           1--10* Database/table
-  tables, and                                        concepts,
-  constraints                                        constraints, identity
-                                                     values, unique keys
 
-  2. Querying and                            11--18 SELECT, GROUP BY,
-  relationships                                      joins, NULL handling,
-                                                     UNION and UNION ALL
+# SQL Learning Program — Business-Oriented SQL Practice
 
-  3. Stored procedures                       19--22 Stored procedures,
-                                                     output parameters,
-                                                     return values,
-                                                     benefits
+## 📘 Overview
 
-  4. Built-in                                23--30 String, date/time,
-  functions                                          conversion, and
-                                                     mathematical
-                                                     functions
+This project is designed to help students learn SQL concepts through self-learning and practical business scenarios.
 
-  5. User-defined                            31--35 Scalar and
-  functions and                                      table-valued
-  temporary tables                                   functions, function
-                                                     concepts, temporary
-                                                     tables
+Students will watch the **Kudvenkat SQL Server Tutorial for Beginners** YouTube playlist and then practise the concepts using business datasets in Databricks SQL Editor.
 
-  6. Indexes and views                       36--42 Index types, index
-                                                     trade-offs, views,
-                                                     updatable and indexed
-                                                 views
-*Video 1 is skipped for this program. Begin with the applicable
-learning content in Video 2.
-Databricks SQL compatibility note
-The playlist teaches SQL Server, while practice is performed in
-Databricks SQL. Syntax and features are not identical.
-- Core querying concepts such as filtering, aggregation, joins, set
-  operations, and many string/date functions transfer well, though
-  syntax can differ.
-- SQL Server-specific features such as IDENTITY, stored procedures,
-  temporary tables, and indexed views may not work the same way---or
-  may not be supported---in Databricks SQL.
-- When a lesson depends on a SQL Server-only feature, focus on
-  understanding the concept and complete the practice using a
-  Databricks-compatible equivalent.
-- Verify syntax against the Databricks SQL documentation when
-  necessary.
-Do not assume every example in a SQL Server video can be pasted into
-Databricks unchanged.
-Suggested project structure
-sql-learning/
+### Learning approach
+
+- Learn concepts through YouTube videos.
+- Practise SQL independently.
+- Solve real-world business problems.
+- Progress from beginner to intermediate and advanced SQL.
+- Work with multiple business datasets.
+
+## 🎥 Learning Resources
+
+- **YouTube lesson:** https://youtu.be/7GVFYt6_ZFM
+- **Full playlist:** https://www.youtube.com/watch?v=7GVFYt6_ZFM&list=PL08903FB7ACA1C2FB
+- **Practice environment:** Databricks SQL Editor
+
+## ⚙️ Setup
+
+Students will use Databricks SQL Editor for SQL practice.
+
+**Important:** Skip playlist Video 1, which covers SQL Server and SQL Server Management Studio installation. The program uses Databricks SQL Editor instead.
+
+## 📚 Learning Plan
+
+| Batch | Videos | Topics |
+|---|---|---|
+| Batch 1 | 1–10 | Tables, constraints, identity columns, unique keys |
+| Batch 2 | 11–18 | SELECT, GROUP BY, joins, NULL handling, UNION |
+| Batch 3 | 19–22 | Stored procedures, output parameters, return values |
+| Batch 4 | 23–30 | String, date/time, conversion, mathematical functions |
+| Batch 5 | 31–35 | User-defined functions and temporary tables |
+| Batch 6 | 36–42 | Indexes, views, updatable views, indexed views |
+
+*Video 1 is skipped. Begin with Video 2 and follow the assigned playlist order.*
+
+## 🏢 Business Datasets
+
+SQL practice will use multiple business domains:
+
+- **Retail:** Customers, products, stores, orders, and sales.
+- **Banking:** Customers, accounts, transactions, and loans.
+- **HR:** Employees, departments, salaries, and attendance.
+- **Healthcare:** Synthetic patients, appointments, and billing records.
+
+The datasets will support practical SQL exercises and testing scenarios.
+
+## 🧪 Practice Methodology
+
+For each learning batch:
+
+1. Watch the assigned YouTube videos.
+2. Understand the concepts and examples.
+3. Write SQL queries independently.
+4. Solve business-based questions.
+5. Validate query results.
+6. Test edge cases such as NULL values, duplicates, and unmatched records.
+7. Save your SQL scripts for review.
+
+## ⚠️ SQL Server vs. Databricks SQL
+
+The YouTube playlist teaches SQL Server, while this project uses Databricks SQL.
+
+Some syntax and features differ. For example:
+
+- `IDENTITY` columns may require a Databricks-compatible alternative.
+- Stored procedures and output parameters differ by platform and may not be supported in the same way.
+- Temporary tables and indexed views have platform-specific limitations.
+- Core concepts such as joins, filtering, grouping, and set operations remain useful, although syntax may vary.
+
+**Rule:** Understand the concept from the video, then practise it using Databricks-compatible SQL.
+
+## 📁 Suggested Repository Structure
+
+```text
+SQL-Learning/
 ├── README.md
 ├── guide/
 │   └── SQL_Lesson_Learning_Guide_Videos_1-42.docx
@@ -92,25 +95,33 @@ sql-learning/
     ├── batch-04-functions/
     ├── batch-05-udfs-temp-tables/
     └── batch-06-indexes-views/
-This is a suggested structure; create folders as the project grows.
-Practice standards
-For each exercise:
-- Read the business requirement carefully.
-- Write the SQL query yourself before checking any answer key.
-- Use meaningful aliases and readable formatting.
-- Validate row counts and inspect sample results.
-- Consider NULLs, duplicates, and unmatched records where relevant.
-- Save your solution and note any Databricks-specific syntax changes.
-Completion checklist
-- [ ] Watch the assigned videos, skipping Video 1.
-- [ ] Complete practice for each batch.
-- [ ] Practise with more than one business dataset.
-- [ ] Test edge cases and validate results.
-- [ ] Record questions and concepts that need review.
-- [ ] Complete the testing scenarios after finishing the learning
-  batches.
-Scope
-The lesson summaries and learning outcomes in the companion guide are
-instructional summaries based on the playlist lesson titles. They are
-not transcripts of the videos. Testing scenarios and answer keys can be
-added as a separate phase.
+```
+
+This is a suggested structure; folders can be added as the project develops.
+
+## 🎯 Learning Objectives
+
+By completing this program, students should be able to:
+
+- Write SQL queries to retrieve and analyse data.
+- Work with multiple tables and relationships.
+- Apply filtering, grouping, aggregation, and joins.
+- Use string, date, and mathematical functions.
+- Understand constraints, functions, indexes, and views.
+- Translate business requirements into SQL solutions.
+- Validate query results and troubleshoot common issues.
+
+## ✅ Progress Checklist
+
+- [ ] Complete the assigned videos, skipping Video 1.
+- [ ] Practise each learning batch.
+- [ ] Solve business scenarios using multiple datasets.
+- [ ] Validate results and test edge cases.
+- [ ] Complete the testing scenarios.
+- [ ] Review and improve SQL solutions.
+
+---
+
+**Project status:** Learning guide and practice framework.
+
+**Next phase:** Develop structured testing scenarios from beginner to advanced difficulty.
